@@ -24,6 +24,8 @@
         "preferred-install": "dist",
         "optimize-autoloader": true
     },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "keywords": [
         "laravel",
         "php",

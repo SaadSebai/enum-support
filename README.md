@@ -12,6 +12,7 @@ This package adds the following functionality to PHP enums using the `Enumerable
 - Retrieve all enum names (`names()`).
 - Get an enum case by name (`getByName()`).
 - Get an enum case by value (`getByValue()`).
+- Translate an enum (`translate()`).
 
 ---
 
@@ -45,24 +46,31 @@ enum UserRole: string
 ```
 ### 2. Use the Enum
 
-Get an array of all the enum values:
+- Get an array of all the enum values:
 ```php
 UserRole::values(); // ['admin', 'editor', 'viewer']
 ```
 
-Get an array of all the enum names:
+- Get an array of all the enum names:
 ```php
 UserRole::names(); // ['ADMIN', 'EDITOR', 'VIEWER']
 ```
 
-Retrieve a specific enum case by its name:
+- Retrieve a specific enum case by its name:
 ```php
 UserRole::getByName('admin'); // Returns UserRole::ADMIN
 UserRole::getByName('invalid'); // Returns null
 ```
 
-Retrieve a specific enum case by its value:
+- Retrieve a specific enum case by its value:
 ```php
 UserRole::getByValue('admin'); // Returns UserRole::ADMIN
 UserRole::getByValue('invalid'); // Returns null
+```
+
+- Translate an enum:
+> ⚠ **Warning**: Before using the `translate()` function, you must create the corresponding translation file. This file should contain the keys and values for the enum cases in the specified language.
+
+```php
+UserRole::ADMIN->translate('role'); // Returns the translation of the enum value using the giving translation file path.
 ```

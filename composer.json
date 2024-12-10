@@ -1,0 +1,27 @@
+{
+    "name": "saad/enum-support",
+    "description": "Add more support to enum",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Saad Sebai",
+            "email": "saadsebaii@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Saad\\EnumSupport\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^11.34"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    }
+}

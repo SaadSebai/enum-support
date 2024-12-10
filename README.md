@@ -20,7 +20,7 @@ This package adds the following functionality to PHP enums using the `Enumerable
 To use this package, add it to your Laravel project with Composer:
 
 ```bash
-composer require saad/enum-support
+composer require saadsebai/enum-support
 ```
 
 ## Usage
